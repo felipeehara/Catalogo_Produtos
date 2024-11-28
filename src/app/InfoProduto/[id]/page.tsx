@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Footer from "@/app/components/Footer/Footer";
 
+import iconReturn from "../../../../public/return-svgrepo-com.svg"
+import { ButtonReturn } from "@/app/components/ButtonReturn/ButtonReturn";
+
 interface Produto {
   id: string;
   nome: string;
@@ -37,6 +40,9 @@ export default function ProdutoDetalhes({ params }: { params: { id: string } }) 
       <Header/>
       <div className="p-6 bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-200 min-h-screen">
         <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6">
+          <div>
+              <ButtonReturn/>
+          </div>
           <div className="relative w-full">
             
             <img
