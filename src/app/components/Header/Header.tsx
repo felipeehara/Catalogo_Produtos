@@ -30,7 +30,7 @@ export default function Header() {
 
         {/* Botão Hamburger para mobile */}
         <button
-          className="lg:hidden text-3xl text-gray-800"
+          className="lg:hidden text-3xl text-gray-800 ml-10"
           onClick={toggleMenu}
         >
           {isMenuOpen ? '✖' : '☰'}
@@ -60,13 +60,13 @@ export default function Header() {
         <Link href="/" className="block text-lg hover:text-blue-600 transition-colors duration-300">
           Home
         </Link>
-        <Link href="/produtos" className="block text-lg hover:text-blue-600 transition-colors duration-300">
+        <Link href="/" className="block text-lg hover:text-blue-600 transition-colors duration-300">
           Produtos
         </Link>
-        <Link href="/sobre" className="block text-lg hover:text-blue-600 transition-colors duration-300">
+        <Link href="/" className="block text-lg hover:text-blue-600 transition-colors duration-300">
           Sobre
         </Link>
-        <Link href="/contato" className="block text-lg hover:text-blue-600 transition-colors duration-300">
+        <Link href="/" className="block text-lg hover:text-blue-600 transition-colors duration-300">
           Contato
         </Link>
       </div>
