@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type CardProdutoProps = {
@@ -18,8 +19,10 @@ export default function CardProduto({
   return (
     <div className="flex justify-center items-center"> 
         <div className="max-w-xs rounded-xl overflow-hidden shadow-lg bg-white transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/40 relative h-[500px]">
-          <img
+          <Image
             className="w-full h-64 object-cover rounded-t-xl transition-transform duration-500 hover:scale-110"
+            height={500}
+            width={500}
             src={imagem}
             alt={nomeProduto}
           />
