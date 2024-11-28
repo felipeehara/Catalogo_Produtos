@@ -27,7 +27,7 @@ export default function Home() {
     <input
       type="text"
       placeholder="Buscar produto..."
-      className="p-3 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-blue-500 transition-all duration-300 w-96 md:w-[450px]"
+      className="p-3 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-blue-500 transition-all duration-300 w-80 ml-2 md:w-[450px]"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
     />
