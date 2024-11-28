@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { produtos } from "../app/Data/Produtos"; 
 import CardProduto from "./components/CardEquipamento/CardEquipamento";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,6 +20,7 @@ export default function Home() {
 
   return (
     <div className="p-4">
+      <Header/>
       {/* Filtro e Busca */}
       <div className="flex justify-between mb-4">
         <div className="w-1/3">
@@ -29,19 +32,7 @@ export default function Home() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div>
-          <select
-            className="p-2 border border-gray-300 rounded"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category === "all" ? "Todas as Categorias" : category}
-              </option>
-            ))}
-          </select>
-        </div>
+
       </div>
 
       {/* Lista de Produtos */}
@@ -57,6 +48,8 @@ export default function Home() {
           />
         ))}
       </div>
+
+      <Footer/>
     </div>
   );
 }
