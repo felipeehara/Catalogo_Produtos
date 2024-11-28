@@ -22,18 +22,35 @@ export default function Home() {
     <div className="p-4">
       <Header/>
       {/* Filtro e Busca */}
-      <div className="flex justify-between mb-4">
-        <div className="w-1/3">
-          <input
-            type="text"
-            placeholder="Buscar produto..."
-            className="p-2 border border-gray-300 rounded w-full"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
+<div className="flex justify-between mb-4">
+  <div className="relative w-1/3">
+    <input
+      type="text"
+      placeholder="Buscar produto..."
+      className="p-3 pl-10 border border-gray-300 rounded-lg w-full shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-blue-500 transition-all duration-300"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+    {/* Ícone de Busca */}
+    <div className="absolute left-3 top-3 text-gray-400">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.6 3.6a7.5 7.5 0 0012.55 12.55z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 
-      </div>
 
       {/* Lista de Produtos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
