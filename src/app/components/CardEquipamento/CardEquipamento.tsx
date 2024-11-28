@@ -1,25 +1,27 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export interface infoEquipamentoProps {
-    nomeEquipamento: string;
-    imagem: string;
-    alt:string;
-}
+type CardProdutoProps = {
+  nomeProduto: string;
+  imagem: string;
+  categoria: string;
+  preco: string;
+  id: string;
+};
 
-export default function CardEquipamento(props: infoEquipamentoProps) {
+export default function CardProduto({ nomeProduto, imagem, categoria, preco, id }: CardProdutoProps) {
   return (
-    <div className="h-96 w-64 bg-white rounded-md">
-        <h1 className="text-bold uppercase text-black text-center text-xl">{props.nomeEquipamento}</h1>
-        <Image
-        src={props.imagem}
-        alt={props.alt}
-        width={640}  // Defina uma largura fixada ou dinâmica aqui
-        height={480} // Defina uma altura fixa ou dinâmica aqui
-      />
-
-        <div className="flex items-center justify-center">
-            <button className="uppercase text-black text-xl border border-black p-4 rounded-xl">Ver Informações</button>
-        </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+      <img className="w-full h-64 object-cover" src={imagem} alt={nomeProduto} />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{nomeProduto}</div>
+        <p className="text-gray-700 text-base">Categoria: {categoria}</p>
+        <p className="text-gray-900 font-bold text-lg">Preço: {preco}</p>
+      </div>
+      <div className="px-6 py-4">
+        <Link href={`/InfoProduto/${id}`} className="text-blue-500 hover:underline">
+          Ver Detalhes
+        </Link>
+      </div>
     </div>
   );
 }
