@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-indigo-600 text-white py-6 mt-12">
+    <footer className="bg-black bg-opacity-20 text-white py-6 mt-12">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-lg">© 2024 Sua Empresa. Todos os direitos reservados.</p>
         <div className="mt-4">

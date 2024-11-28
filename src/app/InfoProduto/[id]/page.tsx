@@ -4,6 +4,7 @@ import Header from "@/app/components/Header/Header";
 import { produtos } from "../../Data/Produtos";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Footer from "@/app/components/Footer/Footer";
 
 interface Produto {
   id: string;
@@ -61,6 +62,7 @@ export default function ProdutoDetalhes({ params }: { params: { id: string } }) 
           </div>
         </div>
       </div>
+      <Footer/>
     </div>  
   );
 }
